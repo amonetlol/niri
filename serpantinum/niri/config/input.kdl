@@ -1,0 +1,26 @@
+hotkey-overlay {
+    skip-at-startup
+}
+
+input {
+    keyboard {
+        xkb {
+            layout "br"
+            variant "abnt2"
+            model "pc105"
+        }
+        numlock
+    }
+
+    mouse {
+        accel-profile "flat"
+        accel-speed 0.0
+    }
+
+    touchpad {
+        tap
+        natural-scroll
+        accel-profile "flat"
+        click-method "clickfinger"
+    }
+}

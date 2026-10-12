@@ -1,0 +1,139 @@
+{
+  "general": {
+    "language": "pt",
+    "avatarPath": "",
+    "muteSfx": false,
+    "weatherInterval": 15,
+    "weatherUnit": "metric",
+    "location": {
+      "latitude": -20.179973,
+      "longitude": -48.0309631,
+      "city": "Miguelopolis",
+      "region": "Sao Paulo",
+      "country_name": "Brazil",
+      "country_code": "BR",
+      "timezone": "America/Sao_Paulo",
+      "source": "manual",
+      "updated_at": 1791753660
+    }
+  },
+  "syspanel": {
+    "clipExpandProgress": 0,
+    "clipExpanded": false,
+    "clipState": 1
+  },
+  "bar": {
+    "position": "top",
+    "width": 100,
+    "opacity": 100,
+    "style": "fill",
+    "time": {
+      "format": "HH:mm"
+    },
+    "autohide": false,
+    "autohideTimeout": 1000,
+    "modules": {
+      "left": [
+        "left",
+        "workspaces"
+      ],
+      "center": [
+        [
+          "timedate",
+          "info",
+          "weather"
+        ]
+      ],
+      "right": [
+        "tray",
+        [
+          "wifi",
+          "vol",
+          "bat"
+        ]
+      ]
+    },
+    "workspaceCount": 5,
+    "btShowIcon": false,
+    "kbShowIcon": true,
+    "groupColors": {
+      "g_timedate": "#cba6f7",
+      "g_kb": "#f5c2e7",
+      "g_wifi": "#8ad0ef"
+    },
+    "sysmonStats": [
+      "cpu",
+      "ram"
+    ],
+    "timeStyle": "material",
+    "wifiStyle": "button",
+    "distinctPills": false
+  },
+  "theme": {
+    "fontFamily": "Adwaita Mono",
+    "borderRadius": 10,
+    "activePreset": "Matugen",
+    "matugen": true
+  },
+  "idle": {
+    "enabled": false,
+    "actions": {
+      "dim": {
+        "id": "dim",
+        "timeout": 150,
+        "enabled": true,
+        "respectInhibitors": true,
+        "mprisInhibit": true,
+        "command": "",
+        "resumeCommand": "",
+        "isCustom": false
+      },
+      "dpms": {
+        "id": "dpms",
+        "timeout": 450,
+        "enabled": true,
+        "respectInhibitors": true,
+        "mprisInhibit": true,
+        "command": "",
+        "resumeCommand": "",
+        "isCustom": false
+      },
+      "lock": {
+        "id": "lock",
+        "timeout": 300,
+        "enabled": true,
+        "respectInhibitors": true,
+        "mprisInhibit": true,
+        "command": "",
+        "resumeCommand": "",
+        "isCustom": false
+      },
+      "suspend": {
+        "id": "suspend",
+        "timeout": 600,
+        "enabled": true,
+        "respectInhibitors": true,
+        "mprisInhibit": true,
+        "command": "",
+        "resumeCommand": "",
+        "isCustom": false
+      }
+    }
+  },
+  "notifications": {
+    "dnd": true,
+    "position": "top right",
+    "sound": true,
+    "soundFile": "@HOME@/.local/share/serpantinum/src/assets/sounds/notifications/Botanica.wav"
+  },
+  "display": {
+    "monitors": {
+      "Virtual-1": {
+        "enabled": true,
+        "scale": 1
+      }
+    }
+  },
+  "wallpaperDir": "@HOME@/Imagens/wallpapers"
+}
+

@@ -1,0 +1,12 @@
+debug {
+    disable-cursor-plane
+}
+
+animations {
+    off
+}
+
+cursor {
+    xcursor-theme "Vimix-cursors"
+    xcursor-size 24
+}

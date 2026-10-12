@@ -1,0 +1,5 @@
+#!/bin/sh
+# A sessão padrão não pode herdar NIRI_CONFIG deixado por um login anterior.
+systemctl --user unset-environment NIRI_CONFIG >/dev/null 2>&1 || true
+unset NIRI_CONFIG
+exec /usr/bin/niri-session "$@"

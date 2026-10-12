@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Niri Serpantinum
+Comment=Niri com o shell Serpantinum
+Exec=/usr/local/bin/niri-serpantinum-session
+Type=Application
+DesktopNames=niri

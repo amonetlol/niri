@@ -1,6 +1,6 @@
 #!/bin/sh
 export NIRI_CONFIG="${HOME}/.config/serpantinum/niri/config.kdl"
-export PATH="${HOME}/.bin:${HOME}/.local/bin:${PATH}"
+export PATH="${HOME}/.local/bin:${HOME}/.bin:${PATH}"
 if [ -z "${LANG:-}" ] || [ "${LANG}" = "C" ] || [ "${LANG}" = "POSIX" ]; then
     export LANG=pt_BR.UTF-8
 fi

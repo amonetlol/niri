@@ -4,7 +4,7 @@
 # update): só mexe em bin/ e src/, nunca em ~/.config.
 set -euo pipefail
 
-REPO="${SERPANTINUM_INSTALLER:-$HOME/.cache/serpantinum-installer}"
+REPO="${SERPANTINUM_INSTALLER:-${XDG_CACHE_HOME:-$HOME/.cache}/serpantinum-installer}"
 STATE_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/serpantinum"
 STATE="$STATE_DIR/version"
 TARGET="$HOME/.local/share/serpantinum"

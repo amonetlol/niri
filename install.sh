@@ -4,8 +4,8 @@
 #   Niri              ~/.config/niri
 #   Niri Serpantinum  ~/.config/serpantinum/niri
 #
-# As entradas do SDDM ficam em /usr/share/wayland-sessions e pedem sudo.
-# O script não instala pacotes, o Serpantinum nem os temas.
+# As sessões e o tema do SDDM são instalados nos diretórios do sistema com sudo.
+# O script não instala pacotes nem o Serpantinum; instala o tema Material You do SDDM.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -42,12 +42,44 @@ mkdir -p "${HOME}/.config/serpantinum"
 backup "${HOME}/.config/serpantinum/settings.json"
 sed "s|@HOME@|${HOME}|g" "${ROOT}/serpantinum/settings.json" > "${HOME}/.config/serpantinum/settings.json"
 
-printf '%s\n' "Instalando ~/.bin/mon"
-mkdir -p "${HOME}/.bin"
+printf '%s\n' "Instalando ~/.local/bin/mon"
+mkdir -p "${HOME}/.local/bin"
 backup "${HOME}/.bin/mon"
-cp -a "${ROOT}/bin/mon" "${HOME}/.bin/mon"
-chmod 755 "${HOME}/.bin/mon"
+backup "${HOME}/.local/bin/mon"
+cp -a "${ROOT}/bin/mon" "${HOME}/.local/bin/mon"
+chmod 755 "${HOME}/.local/bin/mon"
 
+printf '%s\n' "Instalando tema SDDM Material You"
+SDDM_THEME_SOURCE="$ROOT/serpantinum/sddm/themes/material-you"
+SDDM_THEME_DEST="/usr/share/sddm/themes/material-you"
+if sudo test -e "$SDDM_THEME_DEST"; then
+  sudo mv "$SDDM_THEME_DEST" "$SDDM_THEME_DEST.bak.$(date +%Y%m%d%H%M%S)"
+fi
+sudo install -d -m 755 "$SDDM_THEME_DEST"
+sudo cp -r "$SDDM_THEME_SOURCE/." "$SDDM_THEME_DEST/"
+sudo find "$SDDM_THEME_DEST" -type d -exec chmod 755 {} +
+sudo find "$SDDM_THEME_DEST" -type f -exec chmod 644 {} +
+
+SDDM_FONT_SOURCE="$SDDM_THEME_SOURCE/font/GoogleSans-VariableFont_GRAD,opsz,wght.ttf"
+SDDM_FONT_DEST="/usr/share/fonts/TTF/GoogleSans-VariableFont_GRAD,opsz,wght.ttf"
+sudo install -d -m 755 /usr/share/fonts/TTF
+if sudo test -e "$SDDM_FONT_DEST"; then
+  sudo mv "$SDDM_FONT_DEST" "$SDDM_FONT_DEST.bak.$(date +%Y%m%d%H%M%S)"
+fi
+sudo install -m 644 "$SDDM_FONT_SOURCE" "$SDDM_FONT_DEST"
+fc-cache -f /usr/share/fonts >/dev/null 2>&1 || true
+
+SDDM_CONFIG="/etc/sddm.conf.d/10-material-you.conf"
+if sudo test -e "$SDDM_CONFIG"; then
+  sudo mv "$SDDM_CONFIG" "$SDDM_CONFIG.bak.$(date +%Y%m%d%H%M%S)"
+fi
+sudo install -d -m 755 /etc/sddm.conf.d
+sudo tee "$SDDM_CONFIG" >/dev/null <<'SDDM_EOF'
+[Theme]
+Current=material-you
+ThemeDir=/usr/share/sddm/themes
+SDDM_EOF
+sudo chmod 644 "$SDDM_CONFIG"
 printf '%s\n' "Instalando as sessões do login"
 sudo install -m 755 "${ROOT}/sessions/niri-default-session" /usr/local/bin/niri-default-session
 sudo install -m 755 "${ROOT}/sessions/niri-serpantinum-session" /usr/local/bin/niri-serpantinum-session

@@ -7,8 +7,8 @@ binds {
     Super+E { spawn "nautilus"; }
     Alt+X { spawn "wlogout"; }
     Super+X { spawn "wlogout"; }
-    Alt+M { spawn-sh "$HOME/.bin/mon"; }
-    Super+M { spawn-sh "$HOME/.bin/mon"; }
+    Alt+M { spawn-sh "$HOME/.local/bin/mon"; }
+    Super+M { spawn-sh "$HOME/.local/bin/mon"; }
 
     Mod+Backspace { toggle-overview; }
     Mod+Q { close-window; }

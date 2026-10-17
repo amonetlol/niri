@@ -10,10 +10,11 @@ binds {
     Alt+M { spawn-sh "$HOME/.bin/mon"; }
     Super+M { spawn-sh "$HOME/.bin/mon"; }
 
-    Mod+F { spawn "firefox"; }
     Mod+Backspace { toggle-overview; }
     Mod+Q { close-window; }
-    Mod+Shift+F { toggle-window-floating; }
+    Mod+Shift+P { toggle-window-floating; }
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
 
     XF86MonBrightnessDown { spawn "serpantinum" "brightness" "lower"; }
     XF86MonBrightnessUp { spawn "serpantinum" "brightness" "raise"; }

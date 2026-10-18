@@ -5,10 +5,10 @@ binds {
     Super+W { spawn "firefox"; }
     Alt+E { spawn "nautilus"; }
     Super+E { spawn "nautilus"; }
-    Alt+X { spawn "wlogout"; }
-    Super+X { spawn "wlogout"; }
-    Alt+M { spawn-sh "$HOME/.local/bin/mon"; }
-    Super+M { spawn-sh "$HOME/.local/bin/mon"; }
+    Alt+X { spawn-sh "wlogout --layout $HOME/.config/serpantinum/niri/wlogout-layout"; }
+    Super+X { spawn-sh "wlogout --layout $HOME/.config/serpantinum/niri/wlogout-layout"; }
+    Alt+M { spawn-sh "$HOME/.local/bin/mon --niri"; }
+    Super+M { spawn-sh "$HOME/.local/bin/mon --niri"; }
 
     Mod+Backspace { toggle-overview; }
     Mod+Q { close-window; }
@@ -39,6 +39,7 @@ binds {
 
     Mod+R { spawn "serpantinum" "reload"; }
     Mod+C { spawn "serpantinum" "msg" "toggle" "clipboard"; }
+    Alt+D { spawn "serpantinum" "msg" "toggle" "launcher"; }
     Mod+D { spawn "serpantinum" "msg" "toggle" "launcher"; }
     Super+Shift+M { spawn "serpantinum" "msg" "toggle" "music"; }
     Mod+B { spawn "serpantinum" "msg" "toggle" "system"; }

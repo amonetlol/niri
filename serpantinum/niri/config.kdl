@@ -5,3 +5,7 @@ include "config/layout.kdl"
 include "config/vm.kdl"
 include "config/autostart.kdl"
 include "config/keybinds.kdl"
+
+spawn-at-startup "/home/pio/.config/themes/apply-theme.sh" "gtktheme-Niri-Serpantinum"
+
+spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP" "XDG_SESSION_TYPE"

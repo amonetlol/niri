@@ -1,92 +1,124 @@
 binds {
-    Alt+Return { spawn "alacritty"; }
-    Super+Return { spawn "alacritty"; }
-    Alt+W { spawn "firefox"; }
-    Super+W { spawn "firefox"; }
-    Alt+E { spawn "nautilus"; }
-    Super+E { spawn "nautilus"; }
-    Alt+X { spawn-sh "$HOME/.local/bin/wlogout --serpantinum"; }
-    Super+X { spawn-sh "$HOME/.local/bin/wlogout --serpantinum"; }
-    Alt+M { spawn-sh "$HOME/.local/bin/mon --niri"; }
-    Super+M { spawn-sh "$HOME/.local/bin/mon --niri"; }
-    Mod+Backspace { toggle-overview; }
-    Mod+Q { close-window; }
-    Mod+Shift+P { toggle-window-floating; }
-    Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
 
-    Alt+Tab { toggle-overview; }
+    // --- Settings ---
+    Mod+F1                              { show-hotkey-overlay; }
+    //Mod+H                               hotkey-overlay-title="Edit Serpantinum settings" { spawn-sh "foot -e nvim \"$HOME/.config/serpantinum/settings.json\""; }
+    Mod+H                               { spawn "serpantinum" "msg" "toggle" "guide"; }
+    Mod+Period                          hotkey-overlay-title="Edit Niri config" { spawn-sh "alacritty -e nvim \"$HOME/.config/serpantinum/niri\""; }
 
-    XF86MonBrightnessDown { spawn "serpantinum" "brightness" "lower"; }
-    XF86MonBrightnessUp { spawn "serpantinum" "brightness" "raise"; }
+    // --- Apps ---
+    Alt+Return                          { spawn "alacritty"; }
+    Super+Return                        { spawn "alacritty"; }
+    Alt+W                               { spawn "firefox"; }
+    Super+W                             { spawn "firefox"; }
+    Alt+E                               { spawn "nautilus"; }
+    Super+E                             { spawn "nautilus"; }
+    Alt+X                               { spawn-sh "$HOME/.local/bin/wlogout --serpantinum"; }
+    Super+X                             { spawn-sh "$HOME/.local/bin/wlogout --serpantinum"; }
+    Alt+M                               { spawn-sh "$HOME/.local/bin/mon --niri"; }
+    Super+M                             { spawn-sh "$HOME/.local/bin/mon --niri"; }
+    Mod+Q                               { close-window; }
+    Mod+F                               { maximize-column; }
+    Mod+Shift+F                         { fullscreen-window; }
+    Alt+D                               { spawn "serpantinum" "msg" "toggle" "launcher"; }
+    Mod+D                               { spawn "serpantinum" "msg" "toggle" "launcher"; }
+    Mod+B                               { spawn "serpantinum" "msg" "toggle" "system"; }
+    Mod+S                               { spawn "serpantinum" "msg" "toggle" "calendar"; }
+    Mod+N                               { spawn "serpantinum" "msg" "toggle" "network"; }
+    // OLD (key reassigned to Mod+H): Mod+H                               { spawn "serpantinum" "msg" "toggle" "guide"; }
+    Mod+A                               { spawn "serpantinum" "msg" "toggle" "autohide"; }
 
-    Print { spawn "serpantinum" "screenshot"; }
-    Shift+Print { spawn "serpantinum" "screenshot" "--edit"; }
-    Super+Print { spawn "serpantinum" "screenshot" "--full"; }
-    Super+Shift+Print { spawn "serpantinum" "screenshot" "--full" "--edit"; }
+    // --- Resize / Swap ---
+    // OLD (replaced by standardized float shortcut): Mod+Shift+P                         { toggle-window-floating; }
+    // OLD (replaced by standardized column-width controls): Mod+Shift+Left                      { set-column-width "-5%"; }
+    // OLD (replaced by standardized column-width controls): Mod+Shift+Right                     { set-column-width "+5%"; }
+    Mod+Shift+Up                        { set-window-height "-5%"; }
+    Mod+Shift+Down                      { set-window-height "+5%"; }
+    Mod+T                               { toggle-window-floating; }
+    Mod+Backspace                       { switch-preset-column-width-back; }
+    Mod+Minus                           { set-column-width "-10%"; }
+    Mod+Equal                           { set-column-width "+10%"; }
 
-    XF86PowerOff { spawn "serpantinum" "lock"; }
-    Mod+L { spawn "serpantinum" "lock"; }
+    // --- Focus ---
+    // OLD (replaced by standardized overview shortcut): Mod+Backspace                       { toggle-overview; }
+    // OLD (replaced by standardized overview shortcut): Alt+Tab                             { toggle-overview; }
+    Mod+Left                            { focus-column-left; }
+    Mod+Right                           { focus-column-right; }
+    Mod+Up                              { focus-window-or-workspace-up; }
+    Mod+Down                            { focus-window-or-workspace-down; }
+    Mod+Tab                             repeat=false { toggle-overview; }
 
-    Mod+Space { spawn "playerctl" "play-pause"; }
-    XF86AudioPause { spawn "playerctl" "play-pause"; }
-    XF86AudioPlay { spawn "playerctl" "play-pause"; }
-    XF86AudioPrev { spawn "playerctl" "previous"; }
-    XF86AudioNext { spawn "playerctl" "next"; }
-    XF86AudioMicMute { spawn "serpantinum" "volume" "mic-toggle"; }
-    XF86AudioMute { spawn "serpantinum" "volume" "mute-toggle"; }
-    XF86AudioLowerVolume { spawn "serpantinum" "volume" "lower"; }
-    XF86AudioRaiseVolume { spawn "serpantinum" "volume" "raise"; }
+    // --- Movement ---
+    // OLD (replaced by arrow movement controls): Mod+Ctrl+Left                       { move-column-left; }
+    // OLD (replaced by arrow movement controls): Mod+Ctrl+Right                      { move-column-right; }
+    Mod+Ctrl+Up                         { move-column-to-workspace-up; }
+    Mod+Ctrl+Down                       { move-column-to-workspace-down; }
+    Mod+Shift+Left                      { move-column-left; }
+    Mod+Shift+Right                     { move-column-right; }
 
-    Mod+Shift+R { spawn "serpantinum" "reload"; }
-    Mod+V { spawn "serpantinum" "msg" "toggle" "clipboard"; }
-    Alt+D { spawn "serpantinum" "msg" "toggle" "launcher"; }
-    Mod+D { spawn "serpantinum" "msg" "toggle" "launcher"; }
-    Super+Shift+M { spawn "serpantinum" "msg" "toggle" "music"; }
-    Mod+B { spawn "serpantinum" "msg" "toggle" "system"; }
-    Super+Shift+W { spawn "serpantinum" "msg" "toggle" "wallpaper"; }
-    F10 { spawn "serpantinum" "msg" "toggle" "wallpaper"; }
-    Mod+F10 { spawn "serpantinum" "msg" "toggle" "wallpaper"; }
-    Mod+S { spawn "serpantinum" "msg" "toggle" "calendar"; }
-    Mod+N { spawn "serpantinum" "msg" "toggle" "network"; }
-    Mod+Shift+V { spawn "serpantinum" "msg" "toggle" "volume"; }
-    Mod+H { spawn "serpantinum" "msg" "toggle" "guide"; }
-    Mod+A { spawn "serpantinum" "msg" "toggle" "autohide"; }
+    // --- Column ---
+    Mod+C                               { center-column; }
 
-    Mod+Left { focus-column-left; }
-    Mod+Right { focus-column-right; }
-    Mod+Up { focus-window-or-workspace-up; }
-    Mod+Down { focus-window-or-workspace-down; }
+    // --- Workspaces ---
+    Mod+1                               { spawn "serpantinum" "msg" "workspace" "1"; }
+    Mod+2                               { spawn "serpantinum" "msg" "workspace" "2"; }
+    Mod+3                               { spawn "serpantinum" "msg" "workspace" "3"; }
+    Mod+4                               { spawn "serpantinum" "msg" "workspace" "4"; }
+    Mod+5                               { spawn "serpantinum" "msg" "workspace" "5"; }
+    Mod+6                               { spawn "serpantinum" "msg" "workspace" "6"; }
+    Mod+7                               { spawn "serpantinum" "msg" "workspace" "7"; }
+    Mod+8                               { spawn "serpantinum" "msg" "workspace" "8"; }
+    Mod+9                               { spawn "serpantinum" "msg" "workspace" "9"; }
+    Mod+0                               { spawn "serpantinum" "msg" "workspace" "10"; }
+    Mod+Shift+1                         { spawn "serpantinum" "msg" "workspace" "1" "move"; }
+    Mod+Shift+2                         { spawn "serpantinum" "msg" "workspace" "2" "move"; }
+    Mod+Shift+3                         { spawn "serpantinum" "msg" "workspace" "3" "move"; }
+    Mod+Shift+4                         { spawn "serpantinum" "msg" "workspace" "4" "move"; }
+    Mod+Shift+5                         { spawn "serpantinum" "msg" "workspace" "5" "move"; }
+    Mod+Shift+6                         { spawn "serpantinum" "msg" "workspace" "6" "move"; }
+    Mod+Shift+7                         { spawn "serpantinum" "msg" "workspace" "7" "move"; }
+    Mod+Shift+8                         { spawn "serpantinum" "msg" "workspace" "8" "move"; }
+    Mod+Shift+9                         { spawn "serpantinum" "msg" "workspace" "9" "move"; }
+    Mod+Shift+0                         { spawn "serpantinum" "msg" "workspace" "10" "move"; }
 
-    Mod+Ctrl+Left { move-column-left; }
-    Mod+Ctrl+Right { move-column-right; }
-    Mod+Ctrl+Up { move-column-to-workspace-up; }
-    Mod+Ctrl+Down { move-column-to-workspace-down; }
+    // --- Lock / session / task controls ---
+    // OLD (replaced by standardized lock shortcut): XF86PowerOff                        { spawn "serpantinum" "lock"; }
+    // OLD (replaced by standardized lock shortcut): Mod+L                               { spawn "serpantinum" "lock"; }
+    // OLD (replaced by standardized reload shortcut): Mod+Shift+R                         { spawn "serpantinum" "reload"; }
+    Mod+Alt+T                           hotkey-overlay-title="Task Manager (btop)" { spawn "foot" "-e" "btop"; }
+    Mod+Shift+L                         hotkey-overlay-title="Lock Screen" { spawn "serpantinum" "lock"; }
+    Ctrl+Shift+R                        hotkey-overlay-title="Reload Serpantinum" { spawn "serpantinum" "reload"; }
+    Ctrl+Alt+Delete                     hotkey-overlay-title="Logout to SDDM" { quit; }
 
-    Mod+Shift+Left { set-column-width "-5%"; }
-    Mod+Shift+Right { set-column-width "+5%"; }
-    Mod+Shift+Up { set-window-height "-5%"; }
-    Mod+Shift+Down { set-window-height "+5%"; }
+    // --- Audio / media ---
+    Mod+Space                           { spawn "playerctl" "play-pause"; }
+    XF86AudioPause                      { spawn "playerctl" "play-pause"; }
+    XF86AudioPlay                       { spawn "playerctl" "play-pause"; }
+    XF86AudioPrev                       { spawn "playerctl" "previous"; }
+    XF86AudioNext                       { spawn "playerctl" "next"; }
+    XF86AudioMicMute                    { spawn "serpantinum" "volume" "mic-toggle"; }
+    XF86AudioMute                       { spawn "serpantinum" "volume" "mute-toggle"; }
+    XF86AudioLowerVolume                { spawn "serpantinum" "volume" "lower"; }
+    XF86AudioRaiseVolume                { spawn "serpantinum" "volume" "raise"; }
+    Mod+V                               { spawn "serpantinum" "msg" "toggle" "clipboard"; }
+    Super+Shift+M                       { spawn "serpantinum" "msg" "toggle" "music"; }
+    Mod+Shift+V                         { spawn "serpantinum" "msg" "toggle" "volume"; }
 
-    Mod+1 { spawn "serpantinum" "msg" "workspace" "1"; }
-    Mod+2 { spawn "serpantinum" "msg" "workspace" "2"; }
-    Mod+3 { spawn "serpantinum" "msg" "workspace" "3"; }
-    Mod+4 { spawn "serpantinum" "msg" "workspace" "4"; }
-    Mod+5 { spawn "serpantinum" "msg" "workspace" "5"; }
-    Mod+6 { spawn "serpantinum" "msg" "workspace" "6"; }
-    Mod+7 { spawn "serpantinum" "msg" "workspace" "7"; }
-    Mod+8 { spawn "serpantinum" "msg" "workspace" "8"; }
-    Mod+9 { spawn "serpantinum" "msg" "workspace" "9"; }
-    Mod+0 { spawn "serpantinum" "msg" "workspace" "10"; }
+    // --- Display ---
+    XF86MonBrightnessDown               { spawn "serpantinum" "brightness" "lower"; }
+    XF86MonBrightnessUp                 { spawn "serpantinum" "brightness" "raise"; }
+    // OLD (replaced by standardized screenshot shortcut): Print                               { spawn "serpantinum" "screenshot"; }
+    // OLD (replaced by standardized screenshot shortcut): Shift+Print                         { spawn "serpantinum" "screenshot" "--edit"; }
+    // OLD (replaced by standardized screenshot shortcut): Super+Print                         { spawn "serpantinum" "screenshot" "--full"; }
+    // OLD (replaced by standardized screenshot shortcut): Super+Shift+Print                   { spawn "serpantinum" "screenshot" "--full" "--edit"; }
+    // OLD (replaced by standardized wallpaper shortcut): F10                                 { spawn "serpantinum" "msg" "toggle" "wallpaper"; }
+    Mod+F10                             { spawn "serpantinum" "msg" "toggle" "wallpaper"; }
+    Alt+F10                             hotkey-overlay-title="Wallpapers" { spawn "serpantinum" "msg" "toggle" "wallpaper"; }
+    Print                               { screenshot; }
+    Ctrl+Print                          { screenshot-screen; }
+    Alt+Print                           { screenshot-window; }
+    Mod+Shift+P                         { power-off-monitors; }
 
-    Mod+Shift+1 { spawn "serpantinum" "msg" "workspace" "1" "move"; }
-    Mod+Shift+2 { spawn "serpantinum" "msg" "workspace" "2" "move"; }
-    Mod+Shift+3 { spawn "serpantinum" "msg" "workspace" "3" "move"; }
-    Mod+Shift+4 { spawn "serpantinum" "msg" "workspace" "4" "move"; }
-    Mod+Shift+5 { spawn "serpantinum" "msg" "workspace" "5" "move"; }
-    Mod+Shift+6 { spawn "serpantinum" "msg" "workspace" "6" "move"; }
-    Mod+Shift+7 { spawn "serpantinum" "msg" "workspace" "7" "move"; }
-    Mod+Shift+8 { spawn "serpantinum" "msg" "workspace" "8" "move"; }
-    Mod+Shift+9 { spawn "serpantinum" "msg" "workspace" "9" "move"; }
-    Mod+Shift+0 { spawn "serpantinum" "msg" "workspace" "10" "move"; }
+    // --- Mouse ---
+
 }

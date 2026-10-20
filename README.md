@@ -1,29 +1,34 @@
-# niri
+# Niri
 
-Configs de niri e o instalador delas.
+Configs e sessões do Niri baseadas no VM#00:
 
-Duas entradas no login:
+- **Niri Serpantinum**: `~/.config/serpantinum/niri`, com o shell Serpantinum.
+- **Niri Noctalia**: `~/.config/niri-noctalia`, com a topbar Noctalia.
+- **Niri DMS**: `~/.config/niri-dms`, com a topbar DankMaterialShell.
 
-- **Niri** usa `~/.config/niri`. A sessão limpa `NIRI_CONFIG`.
-- **Niri Serpantinum** usa `~/.config/serpantinum/niri/config.kdl` e sobe o shell.
+Rode o instalador da sessão desejada como usuário normal:
 
 ```bash
-chmod +x ./install.sh
-./install.sh
+chmod +x ./install-serpantinum.sh ./install-niri_noctalia.sh ./install-niri_dms.sh
+./install-serpantinum.sh
+# ou
+./install-niri_noctalia.sh
+# ou
+./install-niri_dms.sh
 ```
 
-O script pede sudo para gravar:
+Os instaladores preservam configs e entradas de sessão anteriores com sufixo `.bak.<data>.<pid>`. Eles não instalam Niri, Serpantinum, Noctalia nem DMS; esses componentes precisam estar disponíveis no sistema. O instalador Serpantinum também instala o tema Material You do SDDM.
 
-- `/usr/local/bin/niri-default-session`
-- `/usr/local/bin/niri-serpantinum-session`
-- `/usr/share/wayland-sessions/niri.desktop`
-- `/usr/share/wayland-sessions/niri-serpantinum.desktop`
-- `/usr/share/sddm/themes/material-you`
-- `/usr/share/fonts/TTF/GoogleSans-VariableFont_GRAD,opsz,wght.ttf`
-- `/etc/sddm.conf.d/10-material-you.conf`
+A sessão Serpantinum espera Alacritty, Firefox, Nautilus, cliphist, EasyEffects, `serpantinum` e o cursor Vimix. Em `serpantinum/settings.json`, `@HOME@` é substituído pelo home do usuário; o monitor configurado é `Virtual-1` em 1920x1080, com teclado `br` `abnt2` e idioma `pt_BR.UTF-8`.
 
-Configs que já existam em `~/.config/niri`, `~/.config/serpantinum/niri`, `settings.json` e `~/.local/bin/mon` são movidas para um `.bak.<data>`. Um `~/.bin/mon` legado também é preservado como backup.
+Cada instalador baixa as versões atuais de `mon` e `wlogout` diretamente de `amonetlol/dot` para `~/.local/bin`, para usar os scripts mantidos naquele repositório.
 
-O instalador não instala pacotes. Também instala o tema SDDM Material You do Serpantinum (MIT conforme metadata.desktop; commit upstream 4d54b886979aebac6d1c4245d5ea4a06c4fa1c04). A sessão Serpantinum espera o `serpantinum`, Alacritty, Firefox, Nautilus, wlogout, cliphist, EasyEffects e o cursor Vimix. Em `serpantinum/settings.json`, `@HOME@` vira o home de quem roda o script. O monitor da sessão Serpantinum é `Virtual-1` em 1920x1080, teclado `br` `abnt2` e idioma `pt_BR.UTF-8`.
+As sessões do login ficam em `/usr/share/wayland-sessions` e seus lançadores em `/usr/local/bin`.
 
-Atualização do Serpantinum: https://github.com/ilyamiro/serpantinum. O script ./update.sh atualiza bin/ e src/ e preserva as configurações pessoais.
+O instalador Serpantinum também instala `update-serpantinum.sh` em `~/.local/bin` e `update-manual-serpantinum.sh` em `~/.config/serpantinum`. Para atualizar a instalação do Serpantinum, rode:
+
+```bash
+update-serpantinum.sh
+```
+
+O atualizador manual altera os arquivos do Serpantinum em `bin/` e `src/` e preserva as configurações do usuário.

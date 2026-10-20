@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# update-manual.sh — atualiza o serpantinum preservando as configs do usuário
+# update-manual-serpantinum.sh — atualiza o Serpantinum preservando as configs do usuário
 # Replica o caminho de update do instalador oficial (deploy_package em modo
 # update): só mexe em bin/ e src/, nunca em ~/.config.
 set -euo pipefail

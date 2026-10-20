@@ -5,16 +5,17 @@ binds {
     Super+W { spawn "firefox"; }
     Alt+E { spawn "nautilus"; }
     Super+E { spawn "nautilus"; }
-    Alt+X { spawn-sh "wlogout --layout $HOME/.config/serpantinum/niri/wlogout-layout"; }
-    Super+X { spawn-sh "wlogout --layout $HOME/.config/serpantinum/niri/wlogout-layout"; }
+    Alt+X { spawn-sh "$HOME/.local/bin/wlogout --serpantinum"; }
+    Super+X { spawn-sh "$HOME/.local/bin/wlogout --serpantinum"; }
     Alt+M { spawn-sh "$HOME/.local/bin/mon --niri"; }
     Super+M { spawn-sh "$HOME/.local/bin/mon --niri"; }
-
     Mod+Backspace { toggle-overview; }
     Mod+Q { close-window; }
     Mod+Shift+P { toggle-window-floating; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
+
+    Alt+Tab { toggle-overview; }
 
     XF86MonBrightnessDown { spawn "serpantinum" "brightness" "lower"; }
     XF86MonBrightnessUp { spawn "serpantinum" "brightness" "raise"; }
@@ -37,17 +38,18 @@ binds {
     XF86AudioLowerVolume { spawn "serpantinum" "volume" "lower"; }
     XF86AudioRaiseVolume { spawn "serpantinum" "volume" "raise"; }
 
-    Mod+R { spawn "serpantinum" "reload"; }
-    Mod+C { spawn "serpantinum" "msg" "toggle" "clipboard"; }
+    Mod+Shift+R { spawn "serpantinum" "reload"; }
+    Mod+V { spawn "serpantinum" "msg" "toggle" "clipboard"; }
     Alt+D { spawn "serpantinum" "msg" "toggle" "launcher"; }
     Mod+D { spawn "serpantinum" "msg" "toggle" "launcher"; }
     Super+Shift+M { spawn "serpantinum" "msg" "toggle" "music"; }
     Mod+B { spawn "serpantinum" "msg" "toggle" "system"; }
     Super+Shift+W { spawn "serpantinum" "msg" "toggle" "wallpaper"; }
     F10 { spawn "serpantinum" "msg" "toggle" "wallpaper"; }
+    Mod+F10 { spawn "serpantinum" "msg" "toggle" "wallpaper"; }
     Mod+S { spawn "serpantinum" "msg" "toggle" "calendar"; }
     Mod+N { spawn "serpantinum" "msg" "toggle" "network"; }
-    Mod+V { spawn "serpantinum" "msg" "toggle" "volume"; }
+    Mod+Shift+V { spawn "serpantinum" "msg" "toggle" "volume"; }
     Mod+H { spawn "serpantinum" "msg" "toggle" "guide"; }
     Mod+A { spawn "serpantinum" "msg" "toggle" "autohide"; }
 

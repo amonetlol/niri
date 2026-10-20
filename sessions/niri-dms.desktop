@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Niri DMS
+Comment=Niri com DankMaterialShell
+Exec=/usr/local/bin/niri-dms-session
+Type=Application
+DesktopNames=niri

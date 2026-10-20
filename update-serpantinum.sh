@@ -4,7 +4,7 @@ set -euo pipefail
 
 REPO_SLUG="${REPO_SLUG:-ilyamiro/serpantinum}"
 REPO="${SERPANTINUM_INSTALLER:-${XDG_CACHE_HOME:-$HOME/.cache}/serpantinum-installer}"
-MANUAL="$HOME/.config/serpantinum/update-manual.sh"
+MANUAL="$HOME/.config/serpantinum/update-manual-serpantinum.sh"
 TARGET="$HOME/.local/share/serpantinum"
 STATE="${XDG_STATE_HOME:-$HOME/.local/state}/serpantinum/version"
 

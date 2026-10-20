@@ -9,8 +9,16 @@ binds {
     Mod+Shift+ESCAPE                     { show-hotkey-overlay; }
 
     // ─── Applications ───
-    Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
-    Mod+B                               hotkey-overlay-title="Open Browser: firefox" { spawn "firefox"; }
+    Alt+Return                          hotkey-overlay-title="Terminal: Alacritty" { spawn "alacritty"; }
+    Mod+Return                          hotkey-overlay-title="Terminal: Alacritty" { spawn "alacritty"; }
+    Alt+W                               hotkey-overlay-title="Firefox" { spawn "firefox"; }
+    Mod+W                               hotkey-overlay-title="Firefox" { spawn "firefox"; }
+    Mod+B                               hotkey-overlay-title="Firefox" { spawn "firefox"; }
+    Alt+D                               hotkey-overlay-title="Application Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+D                               hotkey-overlay-title="Application Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Alt+X                               hotkey-overlay-title="Power Menu" { spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+X                               hotkey-overlay-title="Power Menu" { spawn-sh "noctalia msg panel-toggle session"; }
+    Mod+M                               hotkey-overlay-title="Monitor" { spawn-sh "$HOME/.local/bin/mon --niri"; }
 
     // --- Noctalia ---
     Mod+Shift+Return                    hotkey-overlay-title="Open Wallpaper Selector: noctalia wallpaper toggle" { spawn-sh "noctalia msg panel-toggle wallpaper"; }
@@ -24,7 +32,8 @@ binds {
     // Mod+Shift+E                               hotkey-overlay-title="Open Text Editor: Zed" { spawn "zed"; }
 
     // Please choose your own file manager.
-    Alt+M                               hotkey-overlay-title="Toggle monitor resolution" { spawn-sh "$HOME/.local/bin/mon"; }
+    Alt+M                               hotkey-overlay-title="Monitor" { spawn-sh "$HOME/.local/bin/mon --niri"; }
+    Alt+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
     Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
 
     // ─── Media Controls ───
@@ -143,8 +152,8 @@ binds {
     Mod+T                               { toggle-window-floating; }
     Mod+F                               { maximize-column; }
     Mod+Shift+F                         { fullscreen-window; }
-    Mod+W                               { toggle-column-tabbed-display; }
-    Mod+M                               { maximize-window-to-edges; }
+    Mod+Ctrl+W                         { toggle-column-tabbed-display; }
+    Mod+Shift+M                         { maximize-window-to-edges; }
 
     // ─── Screenshots ───
     CTRL+Shift+1                        { screenshot; }

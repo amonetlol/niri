@@ -36,6 +36,14 @@ bash "$ROOT/scripts/install-dot-tools.sh"
 printf '%s\n' "Instalando config Niri Noctalia em ~/.config/niri-noctalia"
 copy_dir "$ROOT/niri-noctalia" "$HOME/.config/niri-noctalia"
 
+printf '%s\n' "Configurando o diretório de wallpapers do Noctalia"
+NOCTALIA_CONFIG_DIR="$HOME/.config/noctalia"
+NOCTALIA_WALLPAPER_CONFIG="$NOCTALIA_CONFIG_DIR/niri-noctalia.toml"
+mkdir -p "$NOCTALIA_CONFIG_DIR"
+backup "$NOCTALIA_WALLPAPER_CONFIG"
+sed "s|@HOME@|${HOME}|g" "$ROOT/niri-noctalia/noctalia/wallpaper.toml" > "$NOCTALIA_WALLPAPER_CONFIG"
+chmod 644 "$NOCTALIA_WALLPAPER_CONFIG"
+
 printf '%s\n' "Instalando a sessão Niri Noctalia"
 sudo_backup /usr/local/bin/niri-default-session
 sudo_backup /usr/share/wayland-sessions/niri.desktop

@@ -248,6 +248,7 @@ include optional=true "dms/binds.kdl"
 include optional=true "dms/outputs.kdl"
 include optional=true "dms/cursor.kdl"
 include optional=true "dms/input.kdl"
+include optional=true "dms/windowrules.kdl"
 
 // Start DankMaterialShell in this session only.
 spawn-at-startup "dms" "run" "--session"

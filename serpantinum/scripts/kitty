@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+export KITTY_CONFIG_DIRECTORY="$HOME/.config/serpantinum/kitty"
+export STARSHIP_CONFIG="$HOME/.config/serpantinum/starship-serpantinum.toml"
+exec /usr/bin/kitty --config "$KITTY_CONFIG_DIRECTORY/kitty.conf" "$@"

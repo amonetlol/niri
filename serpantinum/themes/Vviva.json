@@ -1,0 +1,33 @@
+{
+  "category": "user",
+  "colors": {
+    "base": "#120e07",
+    "blue": "#9a8f80",
+    "crust": "#17130b",
+    "flamingo": "#000000",
+    "green": "#dac4a0",
+    "lavender": "#000000",
+    "mantle": "#201b13",
+    "maroon": "#93000a",
+    "mauve": "#9a8f80",
+    "overlay0": "#ece1d4",
+    "overlay1": "#ece1d4",
+    "overlay2": "#ece1d4",
+    "peach": "#b3cea7",
+    "pink": "#354d2e",
+    "red": "#ffb4ab",
+    "rosewater": "#000000",
+    "sapphire": "#5e4200",
+    "sky": "#000000",
+    "subtext0": "#d1c5b4",
+    "subtext1": "#9a8f80",
+    "surface0": "#241f17",
+    "surface1": "#2f2921",
+    "surface2": "#3a342b",
+    "teal": "#dac4a0",
+    "text": "#ece1d4",
+    "yellow": "#54452a"
+  },
+  "isCustom": true,
+  "name": "Vviva"
+}

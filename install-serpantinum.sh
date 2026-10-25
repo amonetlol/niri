@@ -40,6 +40,7 @@ bash "${ROOT}/scripts/install-dot-tools.sh"
 
 printf '%s\n' "Instalando ~/.config/serpantinum/niri"
 copy_dir "${ROOT}/serpantinum/niri" "${HOME}/.config/serpantinum/niri"
+python3 "${ROOT}/scripts/install-profile-extras.py" serpantinum
 
 printf '%s\n' "Instalando ~/.config/serpantinum/settings.json"
 mkdir -p "${HOME}/.config/serpantinum"

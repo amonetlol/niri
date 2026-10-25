@@ -1,14 +1,15 @@
 binds {
 
     // --- Settings ---
-    Mod+F1                              { show-hotkey-overlay; }
+    Mod+F2                              { show-hotkey-overlay; }
+    Mod+F1                              { spawn "@HOME@/.config/serpantinum/scripts/show-hotkeys"; }
     //Mod+H                               hotkey-overlay-title="Edit Serpantinum settings" { spawn-sh "foot -e nvim \"$HOME/.config/serpantinum/settings.json\""; }
     Mod+H                               { spawn "serpantinum" "msg" "toggle" "guide"; }
-    Mod+Period                          hotkey-overlay-title="Edit Niri config" { spawn-sh "alacritty -e nvim \"$HOME/.config/serpantinum/niri\""; }
+    Mod+Period                          hotkey-overlay-title="Edit Niri config" { spawn-sh "@HOME@/.config/serpantinum/scripts/kitty -e nvim \"$HOME/.config/serpantinum/niri\""; }
 
     // --- Apps ---
-    Alt+Return                          { spawn "alacritty"; }
-    Super+Return                        { spawn "alacritty"; }
+    Alt+Return                          { spawn "@HOME@/.config/serpantinum/scripts/kitty"; }
+    Super+Return                        { spawn "@HOME@/.config/serpantinum/scripts/kitty"; }
     Alt+W                               { spawn "firefox"; }
     Super+W                             { spawn "firefox"; }
     Alt+E                               { spawn "nautilus"; }

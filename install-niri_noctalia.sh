@@ -35,6 +35,7 @@ bash "$ROOT/scripts/install-dot-tools.sh"
 
 printf '%s\n' "Instalando config Niri Noctalia em ~/.config/niri-noctalia"
 copy_dir "$ROOT/niri-noctalia" "$HOME/.config/niri-noctalia"
+python3 "$ROOT/scripts/install-profile-extras.py" niri-noctalia
 
 printf '%s\n' "Configurando o diretório de wallpapers do Noctalia"
 NOCTALIA_CONFIG_DIR="$HOME/.config/noctalia"

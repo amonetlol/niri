@@ -1,0 +1,110 @@
+Super+F2                       Guia nativo do Niri
+Super+F1                       Guia de atalhos em Rofi
+Super+H                        Configurações Noctalia
+Super+.                        Editar configuração Niri
+Alt+Enter                      Abrir Kitty
+Super+Enter                    Abrir Kitty
+Alt+W                          Firefox
+Super+W                        Firefox
+Alt+D                          Abrir aplicativos
+Super+D                        Abrir aplicativos
+Super+M                        Controle de monitores
+Alt+M                          Controle de monitores
+Alt+E                          Abrir arquivos no Nautilus
+Super+E                        Abrir arquivos no Nautilus
+Super+S                        Central de controle
+Super+CTRL+Enter               Abrir aplicativos
+XF86AudioNext                  Próxima faixa
+XF86AudioPrev                  Faixa anterior
+XF86AudioPlay                  Reproduzir / pausar
+XF86AudioPause                 Pausar mídia
+Super+Q                        Fechar janela
+Super+CTRL+C                   Centralizar colunas visíveis
+Super+F                        Maximizar coluna
+Super+Shift+F                  Tela cheia
+Super+Shift+M                  Expandir janela até as bordas
+Super+Ctrl+Shift+R             Alternar altura da janela
+Super+Ctrl+R                   Restaurar altura da janela
+Super+CTRL+F                   Expandir coluna ao espaço disponível
+Super+Minus                    Ajustar largura da coluna -10%
+Super+Equal                    Ajustar largura da coluna +10%
+Super+Shift+Minus              Ajustar altura da janela -10%
+Super+Shift+Equal              Ajustar altura da janela +10%
+Super+T                        Alternar janela flutuante / encaixada
+Super+Backspace                Largura anterior da coluna
+Super+Left                     Focar coluna à esquerda
+Super+Right                    Focar coluna à direita
+Super+Up                       Focar janela acima
+Super+K                        Focar janela acima
+Super+Down                     Focar janela abaixo
+Super+J                        Focar janela abaixo
+Super+Home                     Focar primeira coluna
+Super+End                      Focar última coluna
+Super+Shift+V                  Alternar foco entre flutuantes e colunas
+Super+TAB                      Visão geral
+Super+CTRL+UP                  Mover janela para cima
+Super+CTRL+K                   Mover janela para cima
+Super+CTRL+Down                Mover janela para baixo
+Super+CTRL+J                   Mover janela para baixo
+Super+CTRL+Home                Mover coluna para o início
+Super+CTRL+End                 Mover coluna para o fim
+Super+Shift+Left               Mover coluna à esquerda
+Super+Shift+Right              Mover coluna à direita
+Super+BracketLeft              Agrupar / separar janela à esquerda
+Super+BracketRight             Agrupar / separar janela à direita
+Super+Comma                    Agrupar janela na coluna
+Super+C                        Centralizar coluna
+Super+Ctrl+W                   Alternar abas na coluna
+Super+1                        Ir para workspace 1
+Super+2                        Ir para workspace 2
+Super+3                        Ir para workspace 3
+Super+4                        Ir para workspace 4
+Super+5                        Ir para workspace 5
+Super+6                        Ir para workspace 6
+Super+7                        Ir para workspace 7
+Super+8                        Ir para workspace 8
+Super+9                        Ir para workspace 9
+Super+CTRL+1                   Mover coluna para workspace 1
+Super+CTRL+2                   Mover coluna para workspace 2
+Super+CTRL+3                   Mover coluna para workspace 3
+Super+CTRL+4                   Mover coluna para workspace 4
+Super+CTRL+5                   Mover coluna para workspace 5
+Super+CTRL+6                   Mover coluna para workspace 6
+Super+CTRL+7                   Mover coluna para workspace 7
+Super+CTRL+8                   Mover coluna para workspace 8
+Super+CTRL+9                   Mover coluna para workspace 9
+Super+Shift+1                  Mover coluna para workspace 1
+Super+Shift+2                  Mover coluna para workspace 2
+Super+Shift+3                  Mover coluna para workspace 3
+Super+Shift+4                  Mover coluna para workspace 4
+Super+Shift+5                  Mover coluna para workspace 5
+Super+Shift+6                  Mover coluna para workspace 6
+Super+Shift+7                  Mover coluna para workspace 7
+Super+Shift+8                  Mover coluna para workspace 8
+Super+Shift+9                  Mover coluna para workspace 9
+Super+0                        Ir para workspace 10
+Super+Shift+0                  Mover coluna para workspace 10
+Alt+X                          Menu de energia
+Super+X                        Menu de energia
+Super+Shift+Q                  Menu da sessão
+Super+ESCAPE                   Permitir / bloquear atalhos de aplicativos
+CTRL+ALT+Delete                Encerrar sessão
+Super+Alt+T                    Gerenciador de tarefas (btop)
+Super+Shift+L                  Bloquear tela
+Ctrl+Shift+R                   Recarregar Noctalia
+XF86AudioRaiseVolume           Aumentar volume
+XF86AudioLowerVolume           Diminuir volume
+XF86AudioMute                  Silenciar volume
+XF86AudioMicMute               Silenciar microfone
+Alt+F10                        Escolher wallpaper
+Super+F10                      Escolher wallpaper
+XF86MonBrightnessUp            Aumentar brilho
+XF86MonBrightnessDown          Diminuir brilho
+Super+Shift+P                  Apagar monitores
+Print                          Capturar região
+Ctrl+Print                     Capturar tela
+Alt+Print                      Capturar janela
+Super+WheelScrollDown          Workspace abaixo
+Super+WheelScrollUp            Workspace acima
+Super+CTRL+WheelScrollDown     Mover coluna para workspace abaixo
+Super+CTRL+WheelScrollUp       Mover coluna para workspace acima

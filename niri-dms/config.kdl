@@ -135,6 +135,7 @@ overview {
 // See the binds section below for more spawn examples.
 // This line starts waybar, a commonly used bar for Wayland compositors.
 environment {
+    KITTY_CONFIG_DIRECTORY "@HOME@/.config/niri-dms/kitty"
   XDG_CURRENT_DESKTOP "niri"
 }
 hotkey-overlay {
@@ -248,11 +249,10 @@ include optional=true "dms/binds.kdl"
 include optional=true "dms/outputs.kdl"
 include optional=true "dms/cursor.kdl"
 include optional=true "dms/input.kdl"
-include optional=true "dms/windowrules.kdl"
 
 // Start DankMaterialShell in this session only.
 spawn-at-startup "dms" "run" "--session"
 
-spawn-sh-at-startup "$HOME/.config/themes/apply-theme.sh gtktheme-Niri-DMS"
+spawn-at-startup "@HOME@/.config/themes/apply-theme.sh" "gtktheme-Niri-DMS"
 
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP" "XDG_SESSION_TYPE"

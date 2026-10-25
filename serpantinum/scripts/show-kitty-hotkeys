@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+from pathlib import Path
+import json,re,subprocess
+root=Path.home()/'.config/serpantinum'
+settings=json.loads((root/'settings.json').read_text())
+colors=settings.get('theme',{}).get('colors',{})
+def color(key,default):
+    value=colors.get(key,default)
+    return value if isinstance(value,str) and re.fullmatch(r'#[0-9a-fA-F]{6}(?:[0-9a-fA-F]{2})?',value) else default
+palette={'background':color('base','#1e1e2e'),'background-alt':color('mantle','#181825'),'foreground':color('text','#cdd6f4'),'selected':color('mauve','#cba6f7'),'active':color('mauve','#cba6f7'),'urgent':color('red','#f38ba8')}
+(root/'rofi/colors.rasi').write_text('* {\n'+''.join('    '+key+': '+value+';\n' for key,value in palette.items())+'}\n')
+with (root/'kitty/SHORTCUTS.txt').open() as guide:
+    result=subprocess.run(['/usr/bin/rofi','-no-config','-dmenu','-i','-no-show-icons','-scroll-method','1','-no-cycle','-p','Atalhos Kitty','-mesg','Atalhos usados dentro do Kitty · Esc para fechar','-theme',str(root/'rofi/hotkeys.rasi')],stdin=guide,stdout=subprocess.DEVNULL)
+raise SystemExit(0 if result.returncode in (0,1) else result.returncode)

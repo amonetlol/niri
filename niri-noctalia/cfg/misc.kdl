@@ -2,6 +2,9 @@
     screenshot-path null
 
     environment {
+    KITTY_CONFIG_DIRECTORY "@HOME@/.config/niri-noctalia/kitty"
+        NIRI_NOCTALIA_SESSION "1"
+        STARSHIP_CONFIG "@HOME@/.config/niri-noctalia/cfg/starship-noctalia.toml"
         ELECTRON_OZONE_PLATFORM_HINT "auto"
         QT_QPA_PLATFORM "wayland"
         QT_QPA_PLATFORMTHEME "gtk3"

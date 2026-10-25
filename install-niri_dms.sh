@@ -35,6 +35,7 @@ bash "$ROOT/scripts/install-dot-tools.sh"
 
 printf '%s\n' "Instalando config Niri DMS em ~/.config/niri-dms"
 copy_dir "$ROOT/niri-dms" "$HOME/.config/niri-dms"
+python3 "$ROOT/scripts/install-profile-extras.py" niri-dms
 
 printf '%s\n' "Instalando a sessão Niri DMS"
 sudo_backup /usr/local/bin/niri-dms-session

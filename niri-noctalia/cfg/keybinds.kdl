@@ -1,13 +1,14 @@
 binds {
 
     // --- Settings ---
-    Mod+F1                              { show-hotkey-overlay; }
+    Mod+F2                              { show-hotkey-overlay; }
+    Mod+F1                              { spawn "@HOME@/.config/niri-noctalia/scripts/show-hotkeys"; }
     Mod+H                               hotkey-overlay-title="Open Settings: Noctalia" { spawn-sh "noctalia msg settings-toggle"; }
-    Mod+Period                          hotkey-overlay-title="Edit Niri config" { spawn-sh "alacritty -e nvim \"$HOME/.config/niri\""; }
+    Mod+Period                          hotkey-overlay-title="Edit Niri config" { spawn-sh "@HOME@/.config/niri-noctalia/kitty/launch -e nvim \"$HOME/.config/niri\""; }
 
     // --- Apps ---
-    Alt+Return                          hotkey-overlay-title="Terminal: Alacritty" { spawn "alacritty"; }
-    Mod+Return                          hotkey-overlay-title="Terminal: Alacritty" { spawn "alacritty"; }
+    Alt+Return                          hotkey-overlay-title="Terminal: Kitty" { spawn "@HOME@/.config/niri-noctalia/kitty/launch"; }
+    Mod+Return                          hotkey-overlay-title="Terminal: Kitty" { spawn "@HOME@/.config/niri-noctalia/kitty/launch"; }
     Alt+W                               hotkey-overlay-title="Firefox" { spawn "firefox"; }
     Mod+W                               hotkey-overlay-title="Firefox" { spawn "firefox"; }
     Alt+D                               hotkey-overlay-title="Application Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }

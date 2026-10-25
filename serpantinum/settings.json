@@ -2,7 +2,7 @@
   "general": {
     "language": "pt",
     "avatarPath": "",
-    "muteSfx": false,
+    "muteSfx": true,
     "weatherInterval": 15,
     "weatherUnit": "metric",
     "location": {
@@ -15,7 +15,10 @@
       "timezone": "America/Sao_Paulo",
       "source": "manual",
       "updated_at": 1791753660
-    }
+    },
+    "sfxVolume": 100,
+    "screenshotCaptureOnRelease": false,
+    "quickactions": true
   },
   "syspanel": {
     "clipExpandProgress": 0,
@@ -26,7 +29,7 @@
     "position": "top",
     "width": 100,
     "opacity": 100,
-    "style": "fill",
+    "style": "modular",
     "time": {
       "format": "HH:mm"
     },
@@ -47,33 +50,74 @@
       "right": [
         "tray",
         [
+          "sysmon",
           "wifi",
           "vol",
           "bat"
         ]
       ]
     },
-    "workspaceCount": 5,
+    "workspaceCount": 2,
     "btShowIcon": false,
-    "kbShowIcon": true,
+    "kbShowIcon": false,
     "groupColors": {
       "g_timedate": "#cba6f7",
       "g_kb": "#f5c2e7",
-      "g_wifi": "#8ad0ef"
+      "g_wifi": "#8ad0ef",
+      "g_sysmon": "#c792ea"
     },
     "sysmonStats": [
       "cpu",
       "ram"
     ],
     "timeStyle": "material",
-    "wifiStyle": "button",
-    "distinctPills": false
+    "wifiStyle": "text",
+    "distinctPills": false,
+    "workspacesStyle": "numbers",
+    "menuStyle": "icon",
+    "sysmonStyle": "circle",
+    "height": 40,
+    "centerByEdges": true,
+    "wifiShowName": false,
+    "volShowIcon": true,
+    "volStyle": "text",
+    "batShowIcon": true,
+    "batStyle": "text"
   },
   "theme": {
-    "fontFamily": "Adwaita Mono",
+    "fontFamily": "0xProto Nerd Font",
     "borderRadius": 10,
-    "activePreset": "Matugen",
-    "matugen": true
+    "activePreset": "Vviva",
+    "matugen": false,
+    "colors": {
+      "base": "#120e07",
+      "blue": "#9a8f80",
+      "crust": "#17130b",
+      "flamingo": "#000000",
+      "green": "#dac4a0",
+      "lavender": "#000000",
+      "mantle": "#201b13",
+      "maroon": "#93000a",
+      "mauve": "#9a8f80",
+      "overlay0": "#ece1d4",
+      "overlay1": "#ece1d4",
+      "overlay2": "#ece1d4",
+      "peach": "#b3cea7",
+      "pink": "#354d2e",
+      "red": "#ffb4ab",
+      "rosewater": "#000000",
+      "sapphire": "#5e4200",
+      "sky": "#000000",
+      "subtext0": "#d1c5b4",
+      "subtext1": "#9a8f80",
+      "surface0": "#241f17",
+      "surface1": "#2f2921",
+      "surface2": "#3a342b",
+      "teal": "#dac4a0",
+      "text": "#ece1d4",
+      "yellow": "#54452a"
+    },
+    "elementOpacity": 100
   },
   "idle": {
     "enabled": false,
@@ -124,7 +168,7 @@
     "dnd": true,
     "position": "top right",
     "sound": true,
-    "soundFile": "@HOME@/.local/share/serpantinum/src/assets/sounds/notifications/Botanica.wav"
+    "soundFile": "/usr/share/serpantinum/src/assets/sounds/notifications/Botanica.wav"
   },
   "display": {
     "monitors": {
@@ -134,6 +178,42 @@
       }
     }
   },
-  "wallpaperDir": "@HOME@/Imagens/wallpapers"
+  "wallpaperDir": "@HOME@/Imagens/wallpapers",
+  "dock": {
+    "enabled": false,
+    "position": "bottom",
+    "onTop": true,
+    "elementSize": 44,
+    "floating": false,
+    "background": true,
+    "exclusive": false,
+    "autohide": false,
+    "smartAutohide": true,
+    "autohideTimeout": 1000,
+    "editing": false,
+    "apps": [
+      {
+        "name": "Kitty",
+        "comment": "Fast, feature-rich, GPU based terminal",
+        "desktop_id": "kitty.desktop",
+        "icon": "kitty"
+      },
+      {
+        "name": "Files",
+        "comment": "Access and organize files",
+        "desktop_id": "org.gnome.Nautilus.desktop",
+        "icon": "org.gnome.Nautilus"
+      }
+    ],
+    "overrideBoundsCorrection": false,
+    "enableScrolling": false,
+    "visibleElements": 7,
+    "hoverScale": 120,
+    "cascadeScale": false,
+    "focusRunning": true,
+    "showRunningIndicators": true,
+    "showRunningApps": true,
+    "runningScope": "auto"
+  }
 }
 

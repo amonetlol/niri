@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+export KITTY_CONFIG_DIRECTORY="@HOME@/.config/niri-dms/kitty"
+exec /usr/bin/kitty --config "$KITTY_CONFIG_DIRECTORY/kitty.conf" "$@"

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+export KITTY_CONFIG_DIRECTORY="@HOME@/.config/niri-noctalia/kitty"
+export STARSHIP_CONFIG="@HOME@/.config/niri-noctalia/cfg/starship-noctalia.toml"
+exec /usr/bin/kitty --config "$KITTY_CONFIG_DIRECTORY/kitty.conf" "$@"

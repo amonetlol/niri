@@ -1,0 +1,85 @@
+Super+F2                      Guia nativo do Niri
+Super+F1                      Guia de atalhos em Rofi
+Super+H                       Configurações Serpantinum
+Super+.                       Editar configuração Niri
+Alt+Enter                     Kitty
+Super+Enter                   Kitty
+Alt+W                         Firefox
+Super+W                       Firefox
+Alt+E                         Nautilus
+Super+E                       Nautilus
+Alt+X                         Menu de energia
+Super+X                       Menu de energia
+Alt+M                         Controle de monitores
+Super+M                       Controle de monitores
+Super+Q                       Fechar janela
+Super+F                       Maximizar coluna
+Super+Shift+F                 Fullscreen
+Alt+D                         Launcher
+Super+D                       Launcher
+Super+B                       Painel do sistema
+Super+S                       Calendário
+Super+N                       Rede
+Super+A                       Alternar auto-ocultar barra
+Super+Shift+Up                Ajustar altura da janela -5%
+Super+Shift+Down              Ajustar altura da janela +5%
+Super+T                       Alternar janela flutuante
+Super+Backspace               Preset anterior de largura
+Super+Minus                   Ajustar largura da coluna -10%
+Super+Equal                   Ajustar largura da coluna +10%
+Super+Left                    Focar coluna à esquerda
+Super+Right                   Focar coluna à direita
+Super+Up                      Focar janela/workspace acima
+Super+Down                    Focar janela/workspace abaixo
+Super+Tab                     Overview
+Super+Ctrl+Up                 Mover coluna ao workspace acima
+Super+Ctrl+Down               Mover coluna ao workspace abaixo
+Super+Shift+Left              Mover coluna à esquerda
+Super+Shift+Right             Mover coluna à direita
+Super+C                       Centralizar coluna
+Super+1                       Focar workspace 1
+Super+2                       Focar workspace 2
+Super+3                       Focar workspace 3
+Super+4                       Focar workspace 4
+Super+5                       Focar workspace 5
+Super+6                       Focar workspace 6
+Super+7                       Focar workspace 7
+Super+8                       Focar workspace 8
+Super+9                       Focar workspace 9
+Super+0                       Focar workspace 10
+Super+Shift+1                 Mover janela ao workspace 1
+Super+Shift+2                 Mover janela ao workspace 2
+Super+Shift+3                 Mover janela ao workspace 3
+Super+Shift+4                 Mover janela ao workspace 4
+Super+Shift+5                 Mover janela ao workspace 5
+Super+Shift+6                 Mover janela ao workspace 6
+Super+Shift+7                 Mover janela ao workspace 7
+Super+Shift+8                 Mover janela ao workspace 8
+Super+Shift+9                 Mover janela ao workspace 9
+Super+Shift+0                 Mover janela ao workspace 10
+Super+Alt+T                   Btop
+Super+Shift+L                 Bloquear sessão
+Ctrl+Shift+R                  Recarregar Serpantinum
+Ctrl+Alt+Delete               Encerrar sessão
+Super+Space                   Reproduzir/pausar
+XF86AudioPause                Reproduzir/pausar
+XF86AudioPlay                 Reproduzir/pausar
+XF86AudioPrev                 Faixa anterior
+XF86AudioNext                 Próxima faixa
+XF86AudioMicMute              Alternar microfone
+XF86AudioMute                 Alternar mute
+XF86AudioLowerVolume          Diminuir volume
+XF86AudioRaiseVolume          Aumentar volume
+Super+V                       Clipboard
+Super+Shift+M                 Música
+Super+Shift+V                 Volume
+XF86MonBrightnessDown         Brilho −
+XF86MonBrightnessUp           Brilho +
+Super+F10                     Wallpapers
+Alt+F10                       Wallpapers
+Print                         Capturar região
+Ctrl+Print                    Capturar tela
+Alt+Print                     Capturar janela
+Super+Shift+P                 Desligar monitores
+
+Ctrl+Shift+F1 (no Kitty)      Guia dos atalhos do terminal Kitty

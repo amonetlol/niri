@@ -7,11 +7,11 @@ binds {
     // OLD (replaced by standardized settings shortcut): }
     Mod+Shift+W                         hotkey-overlay-title="Create window rule" { spawn "dms" "ipc" "call" "window-rules" "toggle"; }
     Mod+H                               hotkey-overlay-title="Settings" { spawn "dms" "ipc" "call" "settings" "focusOrToggle"; }
-    Mod+Period                          hotkey-overlay-title="Edit Niri config" { spawn-sh "alacritty -e nvim \"$HOME/.config/niri-dms\""; }
+    Mod+Period                          hotkey-overlay-title="Edit Niri config" { spawn-sh "@HOME@/.config/niri-dms/kitty/launch -e nvim \"$HOME/.config/niri-dms\""; }
 
     // --- Apps ---
-    Alt+Return                          hotkey-overlay-title="Terminal: Alacritty" { spawn "alacritty"; }
-    Mod+Return                          hotkey-overlay-title="Terminal: Alacritty" { spawn "alacritty"; }
+    Alt+Return                          hotkey-overlay-title="Terminal: Kitty" { spawn "@HOME@/.config/niri-dms/kitty/launch"; }
+    Mod+Return                          hotkey-overlay-title="Terminal: Kitty" { spawn "@HOME@/.config/niri-dms/kitty/launch"; }
     Alt+W                               hotkey-overlay-title="Firefox" { spawn "firefox"; }
     Mod+W                               hotkey-overlay-title="Firefox" { spawn "firefox"; }
     Alt+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
